@@ -4,19 +4,17 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS];  // 'N_ELEMENTS' was typed as 'NELEMENTS'
-    std::cout << '1-100 ertekek duplazasa'  // ' used instead of " and missing semicolon
-    for (int i = 0;)  // missing parameters from for loop
-    {
-        b[i] = i * 2;
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0;  i < N_ELEMENTS; i++) {
+        b[i] = (i + 1) * 2;
     }
-    for (int i = 0; i; i++)  // missing condition from loop
-    {
-        std::cout << "Ertek:" // missing semicolon and the value is not printed
+    for (int i = 0; i < N_ELEMENTS; i++) {
+        std::cout << "Ertek:" << b[i] << std::endl; 
     }
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)  // colon instead of semicolon
+    int atlag = 0;
+    for (int i = 0; i < N_ELEMENTS; i++) 
     {
         atlag += b[i];
     }
