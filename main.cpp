@@ -10,19 +10,15 @@ int main()
     {
         b[i] = i * 2;
     }
-    for (int i = 0; i; i++)
+    for (int i = 0; i; i++)  // missing condition from loop
     {
-        std::cout << "Ertek:"
-    }    
+        std::cout << "Ertek:" // missing semicolon and the value is not printed
+    }
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
     for (int i = 0; i < N_ELEMENTS, i++)  // colon instead of semicolon
     {
         atlag += b[i];
-    }
-    // unnecessarly duplicated code block
-    {
-        atlag += b[i]
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
