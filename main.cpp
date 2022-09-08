@@ -4,9 +4,9 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS];
-    std::cout << '1-100 ertekek duplazasa'
-    for (int i = 0;)
+    int *b = new int[NELEMENTS];  // 'N_ELEMENTS' was typed as 'NELEMENTS'
+    std::cout << '1-100 ertekek duplazasa'  // ' used instead of " and missing semicolon
+    for (int i = 0;)  // missing parameters from for loop
     {
         b[i] = i * 2;
     }
@@ -16,7 +16,11 @@ int main()
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++)
+    for (int i = 0; i < N_ELEMENTS, i++)  // colon instead of semicolon
+    {
+        atlag += b[i];
+    }
+    // unnecessarly duplicated code block
     {
         atlag += b[i]
     }
